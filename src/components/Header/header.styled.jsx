@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as palette from "../../constants/colors";
+import * as texts from "../../constants/textsFonts";
 
 export const HeaderStyled = styled.header`
   display: flex;
@@ -17,6 +18,9 @@ export const HeaderStyled = styled.header`
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 `;
 
@@ -45,7 +49,75 @@ export const Navigation = styled.div`
   display: ${(props) => (props.show ? "flex" : "none")};
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  width: 80%;
+  background-color: ${palette.default.white};
   height: 100%;
-  background-color: red;
+  //background-color: ${palette.default.white};
+
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+  }
+
+  & > .logo-netux {
+    width: 200px;
+    height: auto;
+  }
+`;
+
+export const DividerComp = styled.div`
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  & > span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: ${(props) =>
+      props.active ? palette.default.green : palette.default.graylight};
+    margin: 0 5px;
+    & > :first-child {
+      margin-left: 0;
+    }
+  }
+`;
+
+export const LiItem = styled.li`
+  font-size: 22px;
+  font-weight: ${texts.default.black};
+  color: ${(props) =>
+    props.active ? palette.default.white : palette.default.green};
+  background-color: ${(props) =>
+    props.active ? palette.default.green : "transparent"};
+  border: 2px solid ${palette.default.green};
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const BackButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+
+  & > :first-child {
+    width: 25px;
+  }
+
+  & > h3 {
+    font-size: 20px;
+    margin-left: 10px;
+  }
 `;
