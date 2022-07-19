@@ -2,10 +2,10 @@ import React from "react";
 import Header from "../Header/Header";
 import { LayoutStyled } from "./layout.styled";
 
-const Layout = ({ home = false }, props) => {
+const Layout = (props) => {
   return (
     <LayoutStyled>
-      <Header showNavigation={!home} />
+      <Header showNavigation={!props.home} />
       {props.children}
     </LayoutStyled>
   );

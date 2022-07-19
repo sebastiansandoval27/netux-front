@@ -6,9 +6,10 @@ export const LayoutStyled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   overflow: hidden;
   background-color: ${palette.default.white};
   margin: 0;
+  padding: 0;
 `;

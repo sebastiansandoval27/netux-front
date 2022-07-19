@@ -1,15 +1,14 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { AppContainer } from "./app.styled";
 import Layout from "./components/Layout/Layout";
+import Home from "./components/Pages/Home/Home";
 
 function App() {
   const [page, setpage] = useState(0);
 
   return (
     <Layout home={page === 0}>
-      <div className="App">
-        <h2 className="test">Solicita tu turno virtual</h2>
-      </div>
+      <AppContainer>{page === 0 && <Home />}</AppContainer>
     </Layout>
   );
 }

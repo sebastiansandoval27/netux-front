@@ -12,7 +12,7 @@ export const HeaderStyled = styled.header`
   background-color: ${palette.default.white};
   height: 137px;
   z-index: 1;
-  //box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
   & > :first-child {
     position: relative;
     width: 100%;
