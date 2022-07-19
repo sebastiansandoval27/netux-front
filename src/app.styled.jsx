@@ -8,5 +8,5 @@ export const AppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 135px;
 `;

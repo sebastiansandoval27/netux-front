@@ -1,6 +1,7 @@
 import React from "react";
-import { HomeContainer, Text, Image, ButtonSend } from "./home.styled";
+import { HomeContainer, Text, Image } from "./home.styled";
 import Board from "../../../assets/images/board.svg";
+import ButtonSend from "../../ButtonSend/ButtonSend";
 
 const Home = () => {
   return (
@@ -31,7 +32,7 @@ const Home = () => {
                 <h3>Verifica tu información</h3>
               </li>
             </ul>
-            <ButtonSend>Solicitar turno</ButtonSend>
+            <ButtonSend onClick={() => {}} text="Solicitar turno" />
           </div>
         </div>
       </Text>
