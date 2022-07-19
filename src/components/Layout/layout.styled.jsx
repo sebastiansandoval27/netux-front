@@ -8,7 +8,7 @@ export const LayoutStyled = styled.div`
   justify-content: flex-start;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   background-color: ${palette.default.white};
-  padding: 20px;
   margin: 0;
 `;
