@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import * as palette from "../../../constants/colors";
 import * as texts from "../../../constants/textsFonts";
+import { Radio } from "@mui/material";
 
 export const Item = styled.div`
   width: 100%;
   max-width: 100%;
   height: 70px;
   margin: 10px 0;
-  border-bottom: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -29,6 +29,7 @@ export const Item = styled.div`
     padding: 0 10px;
     overflow-x: hidden;
     max-width: 100%;
+    padding-bottom: 5px;
 
     & > h3 {
       width: 100%;

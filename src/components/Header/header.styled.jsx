@@ -111,6 +111,7 @@ export const BackButton = styled.div`
   width: auto;
   height: auto;
   padding: 10px;
+  cursor: pointer;
 
   & > :first-child {
     width: 25px;

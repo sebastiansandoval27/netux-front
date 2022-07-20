@@ -76,8 +76,16 @@ export const Location = styled.div`
   height: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-top: 20px;
-  background-color: red;
+  padding: 5px;
+
+  & > p:first-of-type {
+    margin-top: 5px;
+  }
+  & > p {
+    font-size: 14px;
+    color: ${palette.default.grayMedium};
+  }
 `;

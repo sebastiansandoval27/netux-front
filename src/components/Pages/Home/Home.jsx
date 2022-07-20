@@ -3,7 +3,7 @@ import { HomeContainer, Text, Image } from "./home.styled";
 import Board from "../../../assets/images/board.svg";
 import ButtonSend from "../../ButtonSend/ButtonSend";
 
-const Home = () => {
+const Home = ({ changePage }) => {
   return (
     <HomeContainer>
       <Text>
@@ -32,7 +32,7 @@ const Home = () => {
                 <h3>Verifica tu información</h3>
               </li>
             </ul>
-            <ButtonSend onClick={() => {}} text="Solicitar turno" />
+            <ButtonSend onClick={() => changePage()} text="Solicitar turno" />
           </div>
         </div>
       </Text>

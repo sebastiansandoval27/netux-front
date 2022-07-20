@@ -23,7 +23,7 @@ const Divider = ({ active }) => {
   );
 };
 
-const Header = ({ showNavigation = true }) => {
+const Header = ({ showNavigation = true, page = 0, backButton }) => {
   return (
     <HeaderStyled>
       <div>
@@ -31,18 +31,24 @@ const Header = ({ showNavigation = true }) => {
           <img src={Logo} alt="logo" />
         </LogoContainer>
         <Navigation show={showNavigation}>
-          <BackButton>
+          <BackButton onClick={() => backButton()}>
             <BsArrowLeft size={30} />
             <h3>atras</h3>
           </BackButton>
           <ul>
             <LiItem active={true}>1</LiItem>
-            <Divider active={true} />
-            <LiItem>2</LiItem>
-            <Divider active={false} />
-            <LiItem>3</LiItem>
-            <Divider active={false} />
-            <LiItem>4</LiItem>
+
+            <Divider active={page > 1 && page < 3} />
+
+            <LiItem active={page > 1}>2</LiItem>
+
+            <Divider active={page > 2 && page < 4} />
+
+            <LiItem active={page > 2}>3</LiItem>
+
+            <Divider active={page >= 3} />
+
+            <LiItem active={page >= 3}>4</LiItem>
           </ul>
           <img src={Netux} alt="Netux" className="logo-netux" />
         </Navigation>
